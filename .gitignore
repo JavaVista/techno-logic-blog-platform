@@ -1,0 +1,32 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Builds
+dist/
+build/
+.temp/
+.tmp/
+
+# Env/Secrets
+.env
+.env.local
+.env.*.local
+
+# OS/IDE
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Strapi
+cms/.cache/
+cms/build/
+cms/public/uploads/
+
+# Angular
+frontend/.angular/

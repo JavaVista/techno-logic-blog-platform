@@ -1,0 +1,29 @@
+{
+  "name": "techno-logic-blog-platform",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "cms"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "lint": "npm run -ws lint",
+    "format": "npm run -ws format",
+    "build": "npm run -ws build",
+    "start": "npm run -ws start",
+    "test": "npm run -ws test"
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx,html,scss,css,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2"
+  }
+}
