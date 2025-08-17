@@ -1,0 +1,39 @@
+{
+  "conventionalCommits.scopes": ["setup"],
+  // --- Core editing ---
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  // --- Save / Format / Lint ---
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
+  },
+  // --- Prettier ---
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.semi": true,
+  "prettier.arrowParens": "always",
+  // --- ESLint integration ---
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["typescript", "typescriptreact", "javascript", "html", "json", "markdown"],
+  "eslint.format.enable": true,
+  // --- Angular workspace TypeScript (use local, not global) ---
+  "typescript.tsdk": "frontend/node_modules/typescript/lib",
+  // --- Explorer cleanups ---
+  "files.exclude": {
+    "**/.angular": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "cms/.cache": true,
+    "cms/build": true,
+    "cms/public/uploads": false
+  }
+}
