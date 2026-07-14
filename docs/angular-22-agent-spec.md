@@ -143,6 +143,39 @@ export class ThemeService {
 }
 ```
 
+### 9. Bento Grid Layout System
+
+The platform includes a responsive, Bento-inspired grid layout utility sheet (`_layout.scss`).
+
+#### Usage Rules
+
+- **Grid Container**: Wrap content cards inside a container with class `.tl-bento-grid`.
+- **Grid Columns**: Card containers must consume span classes `.tl-bento-col-1` to `.tl-bento-col-12`.
+- **Grid Rows**: Use `.tl-bento-row-1` to `.tl-bento-row-4` to declare row spans.
+- **Cards**: Combine with `.tl-bento-card` to automatically inherit system backgrounds, borders, transition animations, and shadows.
+
+#### Responsive Behavior
+
+- **Desktop**: Full 12-column grid. Column and row spans are respected exactly as declared.
+- **Tablet (width <= 1024px)**: Collapses to a 6-column grid. Large spans (>= 8) auto-collapse to full width (6), medium spans (5) scale to half width (3), and smaller spans scale to one-third width (2).
+- **Mobile (width <= 600px)**: Collapses to a 1-column vertical stack. All column spans are overridden to full width (`span 1`), and row height spans are reset to `auto` to ensure perfect vertical flow.
+
+_Example Grid Layout:_
+
+```html
+<div class="tl-bento-grid">
+  <!-- Large Featured Post Card -->
+  <article class="tl-bento-card tl-bento-col-8 tl-bento-row-2">
+    <h2>Featured Article</h2>
+  </article>
+
+  <!-- Sidebar Widget -->
+  <aside class="tl-bento-card tl-bento-col-4 tl-raised">
+    <h3>About Me</h3>
+  </aside>
+</div>
+```
+
 ---
 
 ## 🛠 MCP Server Setup in Antigravity IDE
