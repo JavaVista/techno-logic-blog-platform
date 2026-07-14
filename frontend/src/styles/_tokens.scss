@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Techno-Logic Global Design Tokens (_tokens.scss)
+   These tokens are invariant across light, dark, or holiday themes.
+   ========================================================================== */
+
+:root {
+  /* --- Typography --- */
+  --tl-font-family-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --tl-font-family-tight: 'Inter Tight', var(--tl-font-family-sans);
+
+  --tl-font-size-xs: 0.75rem; /* 12px */
+  --tl-font-size-sm: 0.875rem; /* 14px */
+  --tl-font-size-md: 1rem; /* 16px */
+  --tl-font-size-lg: 1.125rem; /* 18px */
+  --tl-font-size-xl: 1.25rem; /* 20px */
+  --tl-font-size-2xl: 1.5rem; /* 24px */
+  --tl-font-size-3xl: 1.875rem; /* 30px */
+  --tl-font-size-4xl: 2.25rem; /* 36px */
+  --tl-font-size-5xl: 3.125rem; /* 50px */
+
+  --tl-font-weight-light: 300;
+  --tl-font-weight-regular: 400;
+  --tl-font-weight-medium: 500;
+  --tl-font-weight-semibold: 600;
+  --tl-font-weight-bold: 700;
+
+  /* --- Spacing --- */
+  --tl-space-2xs: 0.25rem; /* 4px */
+  --tl-space-xs: 0.5rem; /* 8px */
+  --tl-space-sm: 0.75rem; /* 12px */
+  --tl-space-md: 1rem; /* 16px */
+  --tl-space-lg: 1.5rem; /* 24px */
+  --tl-space-xl: 2rem; /* 32px */
+  --tl-space-2xl: 3rem; /* 48px */
+  --tl-space-3xl: 4rem; /* 64px */
+
+  /* --- Border Radius --- */
+  --tl-radius-xs: 4px;
+  --tl-radius-sm: 8px;
+  --tl-radius-md: 12px;
+  --tl-radius-lg: 16px;
+  --tl-radius-xl: 24px;
+  --tl-radius-2xl: 44px;
+  --tl-radius-full: 9999px;
+
+  /* --- Transitions --- */
+  --tl-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tl-transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tl-transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Shadows --- */
+  --tl-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --tl-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --tl-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --tl-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* --- Layout / Grid --- */
+  --tl-max-width-content: 700px;
+  --tl-max-width-container: 1200px;
+}

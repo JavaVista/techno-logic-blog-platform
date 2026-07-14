@@ -109,6 +109,40 @@ For simple form management, prefer Signal Forms (`@angular/forms/signals`).
 
 Always use the native `@if`, `@for`, `@switch` templates syntax. Do not use legacy directives like `*ngIf` or `*ngFor`.
 
+### 8. Global Design Tokens & Theme Switching
+
+The design system is split into two layers:
+
+- **Global Structural Tokens** (`_tokens.scss`): Non-theme specific values such as spacing (`--tl-space-*`), border-radii (`--tl-radius-*`), font families (`--tl-font-family-*`), and standard animation transitions (`--tl-transition-*`).
+- **Theme Tokens** (`_themes.scss`): Theme-specific system colors mapped to custom properties (`var(--tl-sys-*)`) such as backgrounds, surfaces, primary, secondary, text, and border colors.
+
+#### Theme Switching Strategy
+
+- Themes are managed using a custom data attribute on the HTML document root: `[data-tl-theme="theme-name"]`.
+- Supported theme values:
+  - `default-light` / `default-dark`
+  - `christmas-light` / `christmas-dark`
+  - `threekings-light` / `threekings-dark` (Stubbed)
+- To switch themes programmatically, set the attribute on the `document.documentElement` object.
+- In Angular components, bind a Signal or state service to set this attribute dynamically during initial execution or in response to a user theme-toggle event.
+
+_Example Service Method:_
+
+```typescript
+import { Injectable, signal, effect } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
+export class ThemeService {
+  theme = signal('default-dark');
+
+  constructor() {
+    effect(() => {
+      document.documentElement.setAttribute('data-tl-theme', this.theme());
+    });
+  }
+}
+```
+
 ---
 
 ## 🛠 MCP Server Setup in Antigravity IDE

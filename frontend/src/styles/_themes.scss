@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Techno-Logic Theme Tokens (_themes.scss)
+   This file implements Light/Dark variants for Default and Holiday themes.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Default Theme (Modern Sleek Palette)
+   -------------------------------------------------------------------------- */
+
+/* Default / Light Mode */
+:root,
+[data-tl-theme='default-light'] {
+  /* System Backgrounds */
+  --tl-sys-bg: oklch(98.5% 0.004 240);
+  --tl-sys-surface: oklch(100% 0 0);
+  --tl-sys-surface-raised: oklch(99.5% 0.002 240);
+
+  /* Brand/Interactive Colors */
+  --tl-sys-primary: oklch(53.18% 0.28 296.97); /* Electric Violet */
+  --tl-sys-primary-hover: oklch(47.66% 0.246 305.88); /* French Violet */
+  --tl-sys-secondary: oklch(51.01% 0.274 263.83); /* Bright Blue */
+  --tl-sys-accent: oklch(69.02% 0.277 332.77); /* Vivid Pink */
+
+  /* Text Colors */
+  --tl-sys-text: oklch(20% 0.005 300);
+  --tl-sys-text-muted: oklch(45% 0.01 300);
+  --tl-sys-text-on-primary: oklch(100% 0 0);
+
+  /* Borders & Dividers */
+  --tl-sys-border: oklch(90% 0.005 300);
+  --tl-sys-divider: oklch(95% 0.003 300);
+
+  /* Miscellaneous */
+  --tl-sys-scroll-thumb: oklch(80% 0.005 300);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tl-sys-bg: oklch(15% 0.005 285);
+    --tl-sys-surface: oklch(19.37% 0.006 300.98);
+    --tl-sys-surface-raised: oklch(24% 0.008 300);
+
+    --tl-sys-primary: oklch(70.9% 0.18 296.97); /* Soft Electric Violet */
+    --tl-sys-primary-hover: oklch(77% 0.16 290);
+    --tl-sys-secondary: oklch(72.9% 0.15 263.83); /* Soft Bright Blue */
+    --tl-sys-accent: oklch(78.02% 0.18 332.77); /* Soft Pink */
+
+    --tl-sys-text: oklch(95% 0.004 300);
+    --tl-sys-text-muted: oklch(75% 0.008 300);
+    --tl-sys-text-on-primary: oklch(15% 0.005 285);
+
+    --tl-sys-border: oklch(30% 0.01 300);
+    --tl-sys-divider: oklch(23% 0.008 300);
+
+    --tl-sys-scroll-thumb: oklch(35% 0.008 300);
+  }
+}
+
+/* Explicit Default Dark Attribute Selector */
+[data-tl-theme='default-dark'] {
+  --tl-sys-bg: oklch(15% 0.005 285);
+  --tl-sys-surface: oklch(19.37% 0.006 300.98);
+  --tl-sys-surface-raised: oklch(24% 0.008 300);
+
+  --tl-sys-primary: oklch(70.9% 0.18 296.97);
+  --tl-sys-primary-hover: oklch(77% 0.16 290);
+  --tl-sys-secondary: oklch(72.9% 0.15 263.83);
+  --tl-sys-accent: oklch(78.02% 0.18 332.77);
+
+  --tl-sys-text: oklch(95% 0.004 300);
+  --tl-sys-text-muted: oklch(75% 0.008 300);
+  --tl-sys-text-on-primary: oklch(15% 0.005 285);
+
+  --tl-sys-border: oklch(30% 0.01 300);
+  --tl-sys-divider: oklch(23% 0.008 300);
+
+  --tl-sys-scroll-thumb: oklch(35% 0.008 300);
+}
+
+/* --------------------------------------------------------------------------
+   2. Christmas Theme (Holly Red, Pine Green, and Star Gold Palette)
+   -------------------------------------------------------------------------- */
+
+/* Christmas Light Mode */
+[data-tl-theme='christmas-light'] {
+  --tl-sys-bg: oklch(97% 0.012 142); /* Cozy warm mint-white */
+  --tl-sys-surface: oklch(100% 0 0);
+  --tl-sys-surface-raised: oklch(98.5% 0.008 142);
+
+  --tl-sys-primary: oklch(46.2% 0.21 25.4); /* Holly Crimson Red */
+  --tl-sys-primary-hover: oklch(38.5% 0.18 25.4);
+  --tl-sys-secondary: oklch(40.5% 0.16 142.2); /* Forest Pine Green */
+  --tl-sys-accent: oklch(78.5% 0.15 82.5); /* Festive Gold Sparkle */
+
+  --tl-sys-text: oklch(18% 0.015 142);
+  --tl-sys-text-muted: oklch(42% 0.015 142);
+  --tl-sys-text-on-primary: oklch(100% 0 0);
+
+  --tl-sys-border: oklch(86% 0.015 142);
+  --tl-sys-divider: oklch(92% 0.01 142);
+
+  --tl-sys-scroll-thumb: oklch(75% 0.01 142);
+}
+
+/* Christmas Dark Mode */
+[data-tl-theme='christmas-dark'] {
+  --tl-sys-bg: oklch(14% 0.018 145); /* Midnight Forest Green */
+  --tl-sys-surface: oklch(18.5% 0.018 145); /* Deep Pine Surface */
+  --tl-sys-surface-raised: oklch(22.5% 0.016 145);
+
+  --tl-sys-primary: oklch(56.5% 0.22 25.4); /* Bright Holly Crimson */
+  --tl-sys-primary-hover: oklch(64% 0.2 25.4);
+  --tl-sys-secondary: oklch(78.5% 0.15 82.5); /* Gold Highlights */
+  --tl-sys-accent: oklch(52.5% 0.18 142.2); /* Pine Green Accents */
+
+  --tl-sys-text: oklch(96% 0.008 145);
+  --tl-sys-text-muted: oklch(76% 0.01 145);
+  --tl-sys-text-on-primary: oklch(15% 0.015 145);
+
+  --tl-sys-border: oklch(28% 0.018 145);
+  --tl-sys-divider: oklch(22% 0.015 145);
+
+  --tl-sys-scroll-thumb: oklch(32% 0.015 145);
+}
+
+/* --------------------------------------------------------------------------
+   3. Three Kings Day Theme (Stubbed - Royal Purple, Gold and Desert Sands)
+   -------------------------------------------------------------------------- */
+
+/* Three Kings Day Light Mode */
+[data-tl-theme='threekings-light'] {
+  --tl-sys-bg: oklch(96.5% 0.018 78); /* Soft Desert Sand */
+  --tl-sys-surface: oklch(100% 0 0);
+  --tl-sys-surface-raised: oklch(98% 0.015 78);
+
+  --tl-sys-primary: oklch(43% 0.19 308); /* Royal Purple */
+  --tl-sys-primary-hover: oklch(35% 0.17 308);
+  --tl-sys-secondary: oklch(76.5% 0.17 84); /* Crown Gold */
+  --tl-sys-accent: oklch(50.6% 0.16 48); /* Myrrh Terracotta */
+
+  --tl-sys-text: oklch(22% 0.015 78);
+  --tl-sys-text-muted: oklch(46% 0.015 78);
+  --tl-sys-text-on-primary: oklch(100% 0 0);
+
+  --tl-sys-border: oklch(85% 0.015 78);
+  --tl-sys-divider: oklch(91% 0.01 78);
+
+  --tl-sys-scroll-thumb: oklch(76% 0.01 78);
+}
+
+/* Three Kings Day Dark Mode */
+[data-tl-theme='threekings-dark'] {
+  --tl-sys-bg: oklch(13.5% 0.016 272); /* Starry Night Royal Blue */
+  --tl-sys-surface: oklch(17.5% 0.018 272);
+  --tl-sys-surface-raised: oklch(22.5% 0.018 272);
+
+  --tl-sys-primary: oklch(76.5% 0.17 84); /* Crown Gold */
+  --tl-sys-primary-hover: oklch(83% 0.14 84);
+  --tl-sys-secondary: oklch(58% 0.2 308); /* Soft Royal Purple */
+  --tl-sys-accent: oklch(70% 0.12 48); /* Warm Myrrh Accent */
+
+  --tl-sys-text: oklch(95% 0.008 272);
+  --tl-sys-text-muted: oklch(75% 0.01 272);
+  --tl-sys-text-on-primary: oklch(13.5% 0.016 272);
+
+  --tl-sys-border: oklch(27% 0.018 272);
+  --tl-sys-divider: oklch(21% 0.015 272);
+
+  --tl-sys-scroll-thumb: oklch(31% 0.015 272);
+}

@@ -8,11 +8,11 @@
   ],
   "scripts": {
     "prepare": "husky",
-    "lint": "npm run -ws lint",
-    "format": "npm run -ws format",
-    "build": "npm run -ws build",
-    "start": "npm run -ws start",
-    "test": "npm run -ws test"
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces",
+    "build": "npm run build --workspaces",
+    "start": "npm run start --workspaces",
+    "test": "npm run test --workspaces"
   },
   "lint-staged": {
     "*.{ts,js,tsx,jsx,html,scss,css,md,json}": [
